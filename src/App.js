@@ -22,9 +22,6 @@ function App() {
         <Route exact path='/instructors'>
           <Instructors />
         </Route>
-        <Route exact path='/schedule'>
-          <ClassSchedule />
-        </Route>
         <Route exact path='/form'>
           <Form />
         </Route>

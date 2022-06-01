@@ -28,10 +28,10 @@ function App() {
           <Profile />
         </Route>
         <Route exact path='/instructors'>
-          <Instructors />
+          <Instructors instructors={instructors}/>
         </Route>
         <Route exact path='/form'>
-          <Form />
+          <Form instructors={instructors}/>
         </Route>
       </Switch>
     </div>

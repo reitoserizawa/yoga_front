@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*FORMATTING FOR SCHEDULE PAGE*/
+
+.yoga-schedule { 
+  padding-left: 50px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom-style:dotted;
+  border-color:lightslategray; 
+  border-width: 1px;
+}
+
+.row { 
+  display: flex; 
+}
+
+.column { 
+  text-align: left;
+}

@@ -7,10 +7,10 @@ import Instructors from './components/Instructors'
 import ClassSchedule from './components/ClassSchedule'
 import Form from './components/Form'
 
-
 function App() {
   const [instructors, setInstructors] = useState([])
 
+  //Grabs instructors
   useEffect(() => { 
     fetch ('http://localhost:9292/instructors')
     .then(res => res.json())

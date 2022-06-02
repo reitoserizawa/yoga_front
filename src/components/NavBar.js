@@ -25,6 +25,11 @@ function NavBar () {
         <a class="nav-link" href="#">Create Yoga Class</a>
       </li>
     </NavLink>
+    <NavLink to='/edit' exact>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Edit Yoga Class</a>
+      </li>
+    </NavLink>
     </ul>
   </div>
 </nav>

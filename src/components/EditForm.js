@@ -1,5 +1,6 @@
 import React, {useState } from 'react';
 import { useHistory } from "react-router-dom"
+import { Parallax } from "react-parallax";
 
 function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
   const history = useHistory()
@@ -54,7 +55,18 @@ function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
   
   return (
       <div className="main">
-          <h1 style={{padding:"15px"}}>Edit Yoga Class</h1>
+        <Parallax
+        blur={{ min: -30, max: 30 }}
+        bgImage="https://images.squarespace-cdn.com/content/v1/58753c1ff5e231d26b78906c/1633269668495-KSEPBF70BBTPEKJYXCUE/Dragonfly+Yoga+Studio+of+Fredericksburg_Welcome_Home.jpg?format=1500w"
+        bgImageAlt=""
+        // strength={-200}
+        className="parallax"
+        >
+                    <div class="position-relative">
+            <h1 className="hero_title">Edit Yoga Class</h1>
+        </div>     
+        </Parallax>
+
           <hr />
           <form className="form" id='form' onSubmit={(e)=> handleEditSubmit(editClass, e)}>
               <div className="row justify-content-center" style={{padding:"15px"}}>

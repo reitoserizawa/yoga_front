@@ -59,7 +59,7 @@ function Form ({instructors, yogaClasses, setYogaClasses}) {
         className="parallax"
         >
                     <div class="position-relative">
-            <h1 className="hero_title">New Class</h1>
+            <h1 className="hero_title">New Yoga Class</h1>
         </div>     
         </Parallax>
 
@@ -96,11 +96,11 @@ function Form ({instructors, yogaClasses, setYogaClasses}) {
                 <div className="row justify-content-center" style={{padding:"15px"}}>
                     <label className="col-sm-1 col-form-label" for="name">Start</label>
                     <div className="col-sm-2">
-                        <input value={form.schedule_start_time} onChange={handleChange} type="time" id="example" className="form-control" min="7:00" max="21:00" step="60"/>
+                        <input name="schedule_start_time" value={form.schedule_start_time} onChange={handleChange} type="time" id="example" className="form-control" min="7:00" max="21:00" step="60"/>
                     </div>
                     <label className="col-sm-1 col-form-label" for="name">Length</label>
                     <div className="col-sm-2">
-                    <select value={form.class_length} onChange={handleChange} className="form-control" name="length">
+                    <select value={form.class_length} onChange={handleChange} className="form-control" name="class_length">
                             <option value="45 minutes">45 min</option>
                             <option value="1 hour">1 hour</option>
                         </select>

@@ -10,9 +10,12 @@ function InstructorsItem ({name, experience, location, image, bio}) {
           <img src={image} class="card-img-top" alt="Avatar"/>
           <div class="card-body text-center">
             <h5 class="card-title mb-0">{name}</h5>
-            <p>{experience} Years Experience</p>
-            {/* <p>{bio}</p> */}
-            {/* <div class="card-text text-black-50">{location}</div> */}
+            <div class="card-text text-black-50">
+                <span style={{fontSize:"90%"}}><i class="fa-solid fa-location-dot"></i> {location}</span>
+            </div>
+            
+            <hr/>
+            
             <button type="button" class="btn btn-outline-info" onClick={() => setIsOpen(!isOpen)}>See Profile</button>
             <Modal name={name} experience={experience} location={location} image={image} bio={bio} open={isOpen} onClose={() => setIsOpen(false)}></Modal>
           </div>

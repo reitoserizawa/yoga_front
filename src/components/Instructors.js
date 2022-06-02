@@ -3,25 +3,6 @@ import InstructorsItem from './InstructorsItem'
 
 function Instructors ({instructors}) {
 
-    // let output = "<div class='row'>";
-
-    // instructors.map(instructor => {
-
-    // for(var i=0;i<instructors.length;i++) {
-    //    if((i%3)==0)
-    //    {
-    //       output += "</div><div class='row'>" + "<div class='col-md-4'>{divs}</div>";
-    //    }
-    //    else
-    //    {
-    //       output += "<div class='col-md-4'>{divs}</div>";
-    //    }
-    // }
-
-    // if((i%3)!=0) {
-    //    output += "</div><div class='row'>";
-    // }
-    // })
 
     return (
     <div className="main">

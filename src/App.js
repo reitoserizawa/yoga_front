@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar'
+import Home from './components/Home'
 import Profile from './components/Profile'
 import Instructors from './components/Instructors'
 import ClassSchedule from './components/ClassSchedule'
@@ -22,6 +23,9 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/schedule'>
           <ClassSchedule instructors={instructors}/>
         </Route>
         <Route exact path='/profile'>

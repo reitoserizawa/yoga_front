@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Parallax } from "react-parallax";
 import ClassScheduleItem from './ClassScheduleItem';
 
-function ClassSchedule ({instructors}) {
-    const [yogaClasses, setYogaClasses] = useState([])
-    
-    //Grab all the yoga classes
+function ClassSchedule ({instructors, yogaClasses, handleDelete, handleChange}) {
+
+    const [students, setStudents] = useState([])
+
+    //Grab all students
     useEffect(() => { 
-        fetch ('http://localhost:9292/classes')
+        fetch ('http://localhost:9292/students')
         .then(res => res.json())
-        .then(data => setYogaClasses(data))
+        .then(data => setStudents(data))
     }, [])
-    
+
     return ( 
         <div> 
                     <Parallax
@@ -27,7 +28,13 @@ function ClassSchedule ({instructors}) {
         </Parallax>
         <hr />
             {yogaClasses.map(yogaClass => {
-                return <ClassScheduleItem key={yogaClass.id} yogaClass={yogaClass} instructor={instructors.find(instructor => {return yogaClass.instructor_id == instructor.id})}/>
+                return <ClassScheduleItem 
+                key={yogaClass.id} 
+                yogaClass={yogaClass} 
+                yoga_instructor={instructors.find(instructor => {return yogaClass.instructor_id === instructor.id})}
+                student={students.find(student => {return yogaClass.student_id === student.id} )} 
+                handleDelete={handleDelete}
+                handleChange = {handleChange}/>
                 })}
         </div>
     )

@@ -55,7 +55,7 @@ code {
   background-size: cover; */
 
   /* position: relative; */
-  height: 80vh;
+  height: 70vh;
 }
 
 .hero_title {
@@ -93,9 +93,4 @@ code {
   position: absolute;
   top: 260px;
   left: 140px;
-}
-
-#header_button {
-  top: 260px;
-  left: 300px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Parallax } from "react-parallax";
+import { NavLink } from 'react-router-dom'
 import yoga_pose from '../images/yoga_pose.jpg'
 import yoga_hands from '../images/yoga_hands.jpg'
 
@@ -32,7 +33,9 @@ function Home () {
                 <div class="card-body">
                 <h5 class="card-title">Event Schedule</h5>
                 <p class="card-text">We have amazing yoga events throughout the day! Our earliest class starts from 7:00am and the latest class strats from 8:00pm. Find the time fits for you.</p>
+                <NavLink to='/schedule' exact>
                 <button type="button" class="btn btn-outline-dark btn-sm">See Details</button>
+                </NavLink>
                 </div>
             </div>
             <div class="card">
@@ -40,8 +43,9 @@ function Home () {
                 <div class="card-body">
                 <h5 class="card-title">Instructors</h5>
                 <p class="card-text">Our instructors provide professional yoga classes. They have amazing bios so see the team and find a person whom you like to get the lesson from. </p>
+                <NavLink to='/instructors' exact>
                 <button type="button" class="btn btn-outline-dark btn-sm">See Details</button>
-                
+                </NavLink>
                 </div>
             </div>
             <div class="card">
@@ -49,7 +53,11 @@ function Home () {
                 <div class="card-body">
                 <h5 class="card-title">Create Yoga Class</h5>
                 <p class="card-text">Are you a yoga instructor? We also provide a space for those who would like to share your knowledge. Type in all the requirements and be the teacher!</p>
+                
+                <NavLink to='/form' exact>
                 <button type="button" class="btn btn-outline-dark btn-sm">See Details</button>
+                </ NavLink>
+                
                 </div>
             </div>
         </div>  
@@ -78,9 +86,9 @@ function Home () {
             <h1 style={{padding:"20px"}}>Our Team</h1>
         </div>
 
-        <div class="row active-with-click">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <article class="material-card Red">
+        <div className="row active-with-click">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+                <article className="material-card Red">
                     <h2>
                         <span>Reito Serizawa</span>
                         <strong>
@@ -90,84 +98,75 @@ function Home () {
                     </h2>
                     <h4>
                         <strong>
-                            <i class="fa fa-fw fa-star"></i>
+                            <i className="fa fa-fw fa-star"></i>
                             Seltzer Master
                         </strong>
                     </h4>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/274848351_3125827384323770_4873740667326218204_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=nf2pLxNftq0AX-d4q_W&_nc_ht=scontent-lga3-1.xx&oh=00_AT9tcX6qOT3jZe9aZ1B_pt8FJ5uDbxsv73OIf1FFhuReeQ&oe=629D8093" style={{height:"50%", width:"50%"}}/>
+                    <div className="mc-content">
+                        <div className="img-container">
+                            <img className="img-responsive" src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/274848351_3125827384323770_4873740667326218204_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=nf2pLxNftq0AX-d4q_W&_nc_ht=scontent-lga3-1.xx&oh=00_AT9tcX6qOT3jZe9aZ1B_pt8FJ5uDbxsv73OIf1FFhuReeQ&oe=629D8093" style={{height:"50%", width:"50%"}}/>
                         </div>
                         {/* <div class="mc-description">
                             He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
                         </div> */}
                     </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
+                    <a className="mc-btn-action">
+                        <i className="fa fa-bars"></i>
                     </a>
-                    <div class="mc-footer">
+                    <div className="mc-footer">
                         <h4>
                             Social
                         </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
+                        <a className="fa fa-fw fa-linkedin" href="https://www.linkedin.com/in/reitos/"></a>
+                        <a className="fa fa-fw fa-github" href="https://github.com/reitoserizawa"></a>
                     </div>
                 </article>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <article class="material-card Pink">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+                <article className="material-card Pink">
                     <h2>
                         <span>Jess Newman</span>
                     </h2>
                     <h4>
                         <strong>
-                            <i class="fa fa-fw fa-star"></i>
+                            <i className="fa fa-fw fa-star"></i>
                             Yoga Master
                         </strong>
                     </h4>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="https://media-exp1.licdn.com/dms/image/C4D03AQEShGKWMvl8Cw/profile-displayphoto-shrink_800_800/0/1528162702524?e=1659571200&v=beta&t=M_E1hq_Q_Gs39IHo5DsFP-CDoRxPaF66Xv9eoPl2Iy8" style={{height:"50%", width:"50%"}}/>
+                    <div className="mc-content">
+                        <div className="img-container">
+                            <img className="img-responsive" src="https://media-exp1.licdn.com/dms/image/C4D03AQEShGKWMvl8Cw/profile-displayphoto-shrink_800_800/0/1528162702524?e=1659571200&v=beta&t=M_E1hq_Q_Gs39IHo5DsFP-CDoRxPaF66Xv9eoPl2Iy8" style={{height:"50%", width:"50%"}}/>
                         </div>
-                        {/* <div class="mc-description">
-                            He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
-                        </div> */}
+
                     </div>
-                    <a class="mc-btn-action">
-                        <i class="fa fa-bars"></i>
+                    <a className="mc-btn-action">
+                        <i className="fa fa-bars"></i>
                     </a>
-                    <div class="mc-footer">
+                    <div className="mc-footer">
                         <h4>
                             Social
                         </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
+                        <a className="fa fa-fw fa-linkedin" href="https://www.linkedin.com/in/jessicanewman19/"></a>
+                        <a className="fa fa-fw fa-github" href="https://github.com/jessnewman19"></a>
                     </div>
                 </article>
             </div>
 
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <article class="material-card Pink">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+                <article className="material-card Pink">
                     <h2>
                         <span>Rachel Katz</span>
                     </h2>
                     <h4>
                         <strong>
-                            <i class="fa fa-fw fa-star"></i>
+                            <i className="fa fa-fw fa-star"></i>
                             Vacuum Master
                         </strong>
                     </h4>
-                    <div class="mc-content">
-                        <div class="img-container">
-                            <img class="img-responsive" src="https://robohash.org/sitsequiquia.png?size=300x300&set=set1" style={{height:"50%", width:"50%"}}/>
+                    <div className="mc-content">
+                        <div className="img-container">
+                            <img className="img-responsive" src="https://robohash.org/sitsequiquia.png?size=300x300&set=set1" style={{height:"50%", width:"50%"}}/>
                         </div>
-                        {/* <div class="mc-description">
-                            He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
-                        </div> */}
                     </div>
                     <a class="mc-btn-action">
                         <i class="fa fa-bars"></i>
@@ -176,10 +175,8 @@ function Home () {
                         <h4>
                             Social
                         </h4>
-                        <a class="fa fa-fw fa-facebook"></a>
-                        <a class="fa fa-fw fa-twitter"></a>
-                        <a class="fa fa-fw fa-linkedin"></a>
-                        <a class="fa fa-fw fa-google-plus"></a>
+                        <a className="fa fa-fw fa-linkedin"></a>
+                        <a className="fa fa-fw fa-github"></a>
                     </div>
                 </article>
             </div>
@@ -193,7 +190,6 @@ function Home () {
         // strength={-200}
         className="parallax"
         >            
-        
         </Parallax>
         </>
     )

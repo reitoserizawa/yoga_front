@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Parallax } from "react-parallax";
 
 function Form ({instructors}) {
 
@@ -77,7 +78,18 @@ function Form ({instructors}) {
     return (
         <div className="main">
 
-            <h1 style={{padding:"15px"}}>New Class</h1>
+<Parallax
+        blur={{ min: -30, max: 30 }}
+        bgImage="https://media.kcentv.com/assets/KCEN/images/1ab8e803-0b56-4238-a17c-a6b1708a6637/1ab8e803-0b56-4238-a17c-a6b1708a6637_1920x1080.jpg"
+        bgImageAlt=""
+        // strength={-200}
+        className="parallax"
+        >
+                    <div class="position-relative">
+            <h1 className="hero_title">New Class</h1>
+        </div>     
+        </Parallax>
+
             <hr />
 
             <form className="form" id='form' onSubmit={handleSubmit}>
@@ -164,6 +176,7 @@ function Form ({instructors}) {
                 <button type="submit" className="btn btn-outline-primary">Submit</button>
 
             </form>
+            <hr />
         </div>
     )
 }

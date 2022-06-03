@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom"
 import { Parallax } from "react-parallax";
 
 function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
+
   const history = useHistory()
   const [editForm, setEditForm] = useState({
       yoga_type: editClass.yoga_type, 
@@ -46,7 +47,7 @@ function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
           class_length: "", 
           student_id: 1
           })
-      history.push('/')
+      history.push('/schedule')
   }
 
   let eachInstructor = instructors.map(instructor =>
@@ -121,6 +122,7 @@ function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
                       onChange={handleChange} 
                       type="time" 
                       id="example" 
+                      name="schedule_start_time"
                       className="form-control" 
                       min="7:00" 
                       max="21:00" 

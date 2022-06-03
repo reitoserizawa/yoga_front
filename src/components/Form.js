@@ -41,7 +41,7 @@ function Form ({instructors, yogaClasses, setYogaClasses}) {
             class_length: "", 
             student_id: 1
             })
-        history.push('/')
+        history.push('/schedule')
     }
 
     let eachInstructor = instructors.map(instructor =>
@@ -96,7 +96,7 @@ function Form ({instructors, yogaClasses, setYogaClasses}) {
                 <div className="row justify-content-center" style={{padding:"15px"}}>
                     <label className="col-sm-1 col-form-label" for="name">Start</label>
                     <div className="col-sm-2">
-                        <input name="schedule_start_time" value={form.schedule_start_time} onChange={handleChange} type="time" id="example" className="form-control" min="7:00" max="21:00" step="60"/>
+                        <input value={form.schedule_start_time} onChange={handleChange} type="time" id="example" name="schedule_start_time" className="form-control" min="7:00" max="21:00" step="60"/>
                     </div>
                     <label className="col-sm-1 col-form-label" for="name">Length</label>
                     <div className="col-sm-2">

@@ -2,7 +2,7 @@ import React, {useState } from 'react';
 import { useHistory } from "react-router-dom"
 import { Parallax } from "react-parallax";
 
-function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
+function EditForm({instructors, editClass, yogaClasses, setYogaClasses, updateMe, setUpdateMe}) {
 
   const history = useHistory()
   const [editForm, setEditForm] = useState({
@@ -48,6 +48,7 @@ function EditForm({instructors, editClass, yogaClasses, setYogaClasses}) {
           student_id: 1
           })
       history.push('/schedule')
+      setUpdateMe(!updateMe)
   }
 
   let eachInstructor = instructors.map(instructor =>

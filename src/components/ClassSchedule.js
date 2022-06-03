@@ -9,7 +9,7 @@ function ClassSchedule ({instructors, yogaClasses, handleDelete, handleChange}) 
     //Grab all students
     useEffect(() => { 
         fetch ('http://localhost:9292/students')
-        .then(res => res.json())
+        .then(r => r.json())
         .then(data => setStudents(data))
     }, [])
 

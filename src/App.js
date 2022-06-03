@@ -13,6 +13,7 @@ function App() {
   const [yogaClasses, setYogaClasses] = useState([])
   const [instructors, setInstructors] = useState([])
   const [editClass, setEditClass] = useState([])
+  const [updateMe, setUpdateMe] = useState(true)
   const history = useHistory()
 
   //Grabs instructors
@@ -27,7 +28,7 @@ function App() {
     fetch ('http://localhost:9292/classes')
     .then(res => res.json())
     .then(data => setYogaClasses(data))
-}, [])
+}, [updateMe])
 
   //Handle deleting a specific yoga class
   const handleDelete = (yogaClassToDelete) => { 
@@ -68,7 +69,7 @@ function App() {
           <Form instructors={instructors} yogaClasses={yogaClasses} setYogaClasses={setYogaClasses}/>
         </Route>
         <Route exact path='/edit'>
-          <EditForm editClass={editClass} instructors={instructors} yogaClasses={yogaClasses} setYogaClasses={setYogaClasses}/>
+          <EditForm editClass={editClass} instructors={instructors} yogaClasses={yogaClasses} setYogaClasses={setYogaClasses} updateMe={updateMe} setUpdateMe={setUpdateMe}/>
         </Route>
       </Switch>
     </div>

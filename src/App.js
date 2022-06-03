@@ -45,7 +45,6 @@ function App() {
   //Handle change class button click
   const handleChange = (yogaClassToChange) => { 
     history.push('/edit')
-    console.log(yogaClassToChange.schedule_date.strftime("%Y/%d/%m"))
     setEditClass(yogaClassToChange)
   }
 

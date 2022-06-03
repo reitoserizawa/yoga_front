@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 function ClassScheduleItem ({yogaClass, yoga_instructor, student, handleDelete, handleChange}) {
     const [showDiv, setShowDiv] = useState(false)
-    const { class_length, intensity, schedule_date, schedule_start_time} = yogaClass
+    const { class_length, intensity, schedule_date, schedule_start_time, yoga_type} = yogaClass
 
     const showStudentInformation = () => { 
         return ( 
@@ -31,6 +31,9 @@ function ClassScheduleItem ({yogaClass, yoga_instructor, student, handleDelete, 
             <div class="yoga_column1">
                 <div class="item">
                     <strong>Instructor: </strong>{yoga_instructor.first_name} {yoga_instructor.last_name}
+                </div>
+                <div class="item">
+                    <strong>Class type: </strong>{yoga_type}
                 </div>
                 <div class="item">
                     <strong>Class start: </strong>{schedule_start_time}, {class_length}
